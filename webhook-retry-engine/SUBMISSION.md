@@ -8,6 +8,8 @@
 - Selected problem: Problem 2, Webhook Retry Engine
 - Demo video: https://www.loom.com/share/62471cec79024b01b6bc9659851faaaf
 
+Note: I forked the repository and selected Problem 2 (Webhook Retry Engine) when that was the live version of the challenge. I noticed afterward that the upstream repository was substantially updated with a new set of problems, and problem 2 is no longer part of that new structure. This submission is built against the version of the brief that was live when I started, flagging this for transparency rather than leaving it unmentioned.
+
 ## Run the project
 
 Needs Node 22.5+ (uses the built-in node:sqlite module, no native build tools, no external db).
