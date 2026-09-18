@@ -88,7 +88,7 @@ Bounded failure (AC3): set the receiver to fail mode, submit a new event, wait. 
 
 Idempotent ingestion (AC4): submit the same eventId again, even with a different payload. You get the original event back, status 200 not 201, attempt history doesn't grow a second job's worth.
 
-Crash recovery: stop the server (ctrl+c or kill it) while an event is mid-delivery, run npm run dev again. The startup log shows how many events got recovered from a stuck delivering state back to pending, and delivery picks back up from there instead of the event getting lost.
+Crash recovery: hitting the exact moment a real crash happens mid-delivery is timing-dependent, so there's a script that forces it deterministically instead of hoping a manual ctrl+c lines up. Stop the server, run `npm run simulate-crash` (it directly marks a fresh event as stuck in 'delivering', simulating the process having died right after claiming it), then run `npm run dev` again. The startup log prints how many events it recovered back to pending, every time. (You can still do it the manual way too, stop the server for real while an event happens to be mid-delivery and restart it, but the script is the reliable way to see it.)
 
 ## Configuration
 
