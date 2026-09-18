@@ -10,6 +10,8 @@
 
 Note: I forked the repository and selected Problem 2 (Webhook Retry Engine) when that was the live version of the challenge. I noticed afterward that the upstream repository was substantially updated with a new set of problems, and problem 2 is no longer part of that new structure. This submission is built against the version of the brief that was live when I started, flagging this for transparency rather than leaving it unmentioned.
 
+For the record, GitHub's own server timestamps show my fork was created at 2026-09-18 17:07:01 UTC (`fork.created_at` via the GitHub API), before the upstream rewrite commit at 2026-09-18 17:41:46 UTC (`6c5d0c2`, "Create persistent companion engineering challenges"). Anyone can verify both timestamps directly against GitHub's API.
+
 ## Run the project
 
 Needs Node 22.5+ (uses the built-in node:sqlite module, no native build tools, no external db).
